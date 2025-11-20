@@ -2,7 +2,7 @@ const navBar = document.querySelector("header");
 function loadHeader() {
     let displayContent =
     `
-        <nav class="nav_bar">
+        <nav id="nav_bar">
             <ul>
                 <input type="text" placeholder="Search..">
                 <li class="navigation active"><a href="index.html">Home</a></li>

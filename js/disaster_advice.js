@@ -3,7 +3,7 @@ const navBar = document.querySelector("header");
 function loadHeader() {
     let displayContent =
     `
-        <nav class="nav_bar">
+        <nav id="nav_bar">
             <ul>
                 <input type="text" placeholder="Search..">
                 <li class="navigation"><a href="index.html">Home</a></li>
@@ -20,9 +20,14 @@ function loadHeader() {
 window.addEventListener("DOMContentLoaded", loadHeader, false);
 
 // Load page content
-const infoSection = document.querySelector("#info-section");
+const infoSection = document.querySelector(".info-section"); // '.' for class, '#' for id
 function loadContent() {
-    
+    let displayContent = 
+    `
+        <p>do something</p>
+    `;
+
+    infoSection.innerHTML = displayContent;
 }
 
 window.addEventListener("DOMContentLoaded", loadContent, false);
