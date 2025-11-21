@@ -1,22 +1,5 @@
-const navBar = document.querySelector("header");
-function loadHeader() {
-    let displayContent =
-    `
-        <nav id="nav_bar">
-            <ul>
-                <input type="text" placeholder="Search..">
-                <li class="navigation"><a href="index.html">Home</a></li>
-                <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li>
-                <li class="navigation"><a href="ema.html">Emergancy Medical Advice</a></li>
-                <li class="navigation"><a href="regional_info.html">Region Info</a></li>
-            </ul>
-        </nav>
-    `;
 
-    navBar.innerHTML = displayContent;
-}
 
-window.addEventListener("DOMContentLoaded", loadHeader, false);
 
 
 const params = new URLSearchParams(window.location.search); // returns everything after ? in url
@@ -35,7 +18,37 @@ const disasterData = {
     wildfire: `
         <h1>Wildfire Safety</h1>
         <p>Be ready to evacuate...</p>
-    `
+    `,
+
+    flood: `
+        <h1>Flood Safety</h1>
+        <p>get a boat...</p>
+    `,
+
+    activeWarzone: `
+        <h1>active warzone Safety</h1>
+        <p>get to air raid shelter...</p>
+    `,
+
+    industrialAccident: `
+        <h1>industrial accident Safety</h1>
+        <p>call emergancy services...</p>
+    `,
+
+    publicHealthEmergencies: `
+        <h1>public health emergencies Safety</h1>
+        <p>wear a facemask...</p>
+    `,
+
+    hurricane: `
+        <h1>Hurricane Safety</h1>
+        <p>get in storm shelter...</p>
+    `,
+
+    educationalContent: `
+        <h1>Educational content</h1>
+        <p>quiz quiz quiz!</p>
+    `,
 };
 
 function loadDisasterContent(type) {
