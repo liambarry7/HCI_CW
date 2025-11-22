@@ -1,0 +1,40 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+#navList {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.navigation { /** general nav stles **/
+    padding: 20px;
+}
+
+#searchBar {
+    padding: 10px; 
+}
+
+#settingsButton {
+    display: flex;
+    cursor: pointer;
+    padding: 0;
+
+}
+
+#settingsIcon {
+    width: 26px;
+    height: 26px;
+}
+
+
+
+
+
+body {
+    background-color: whitesmoke;
+}
