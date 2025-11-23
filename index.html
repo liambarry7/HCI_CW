@@ -7,24 +7,27 @@
         <link rel="stylesheet" href="general.css">
         <script src="js/navigation.js" defer></script>
         <script src="js/index.js" defer></script>
+        <script src="js/alertsbutton.js" defer></script>
+        <script src="js/breadcrumbs.js" defer></script>
     </head>
 
     <body>
-        <header class="headerTitle">Title</header>
-        <div id="navBar"> </div>
-
-        <div>
-            <h2>World Disaster Management Organisation</h2></h1>
-            <button type="button">Signup for alerts!</button>
-        </div>
+        <div id="navwrapper"> </div>
+        <header class="headerTitle">
+            World Disaster Management Organisation
+            <button type="button" id = 'alert'>Signup for alerts!</button>
+        </header>
 
         <main>
+            <nav aria-label="Breadcrumb" class="breadcrumbs">
+                <ol id="breadcrumbList"></ol>
+            </nav>
             <h2>World Disaster Management Organisation</h2>
             <p> HOME </p>
             <p> https://webaim.org/resources/contrastchecker/</p>
-            <p> look into breadcrumbs</p>
-            
+
         </main>
+
         <footer>
             <small><i>Copyright &copy; 2025 G13 Liam Barry, Luca Harper-Daude </i></small>
         </footer>

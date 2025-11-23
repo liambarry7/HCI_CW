@@ -8,7 +8,7 @@ function show_alert_popup(){
     let phone = prompt("Please Enter your phone number: ")
 
     if(signup =='' || email == '' || phone == ''){
-        text = 'Signup Failed'
+        window.alert('Signup Failed')
     } else {
         text = 'Signup Successful'
     }
