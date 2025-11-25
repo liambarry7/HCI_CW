@@ -7,9 +7,9 @@ function loadHeader() {
                     <div id="navLeft">
                 <ul id="navList">
                     <li class="navigation"><input id="searchBar" type="text" placeholder="Search.."></li>
-                    <li class="navigation"><a href="index.html">Home</a></li>
-                    <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li>
-                    <li class="navigation"><a href="ema.html">Emergency Medical Advice</a></li>
+                    <li class="navigation"><a href="index.html">Home</a></li> |
+                    <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li> |
+                    <li class="navigation"><a href="ema.html">Emergency Medical Advice</a></li> |
                     <li class="navigation"><a href="regional_info.html">Region Info</a></li>
                 </ul>
             </div>

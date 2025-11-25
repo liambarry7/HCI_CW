@@ -12,9 +12,11 @@ body {
 }
 
 .headerTitle {
-    color: black;
+    color: white;
+    background-color: #161616;
     text-align: center;
     padding: 1.5rem 0;
+    font: Impact;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -35,14 +37,18 @@ body {
     padding: 0;
 }
 
+#navwrapper {
+    background-color: #343434;
+}
+
 .navigation {
-    padding: 10px 15px;
+    padding: 0 15px;
 }
 
 #navBar a {
-    color: black;
+    color: white;
     text-decoration: none;
-    background-color: #ffa8a8;
+    background-color: #1a1a1a;
     padding: 8px 14px;
     border-radius: 6px;
     transition: background-color 0.3s ease;
