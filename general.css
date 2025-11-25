@@ -6,7 +6,7 @@
 body {
     background-color: whitesmoke;
     margin: 0;
-    padding: 0;
+    padding-bottom: 80px;
     color: #222;
     line-height: 1.6;
 }
@@ -96,7 +96,7 @@ body {
 }
 
 main {
-    padding: 2rem;
+    padding: 50px;
 }
 
 h2 {
@@ -116,12 +116,6 @@ button#alert {
     margin: 10px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
 
 button#alert:hover {
     background-color: #ff1a1a;
@@ -133,10 +127,20 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 footer small {
     font-size: 0.9rem;
+}
+
+.breadcrumbs{
+    padding: 10px 15px
 }
 
 .breadcrumbs ol {
@@ -164,4 +168,91 @@ footer small {
 
 .breadcrumbs a:hover {
     text-decoration: underline;
+}
+
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 200px;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* dark overlay for readability */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    border-radius: 10px;
+}
+
+.bannerContent {
+    position: relative;
+    color: white;
+    padding: 1.2rem;
+    z-index: 2;
+}
+
+.bannerContent h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.bannerContent p {
+    margin-top: 6px;
+    font-size: 1rem;
+}
+
+/* Image zoom effect */
+.banner:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark overlay for readability */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    border-radius: 10px;
+
+    transition: background 0.35s ease;
+}
+
+/* Overlay darkens more on hover */
+.banner:hover::before {
+    background: rgba(0,0,0,0.6);
+}
+
+/* Text container */
+.bannerContent {
+    position: relative;
+    color: white;
+    padding: 1.2rem;
+    z-index: 2;
+
+    transition: transform 0.35s ease;
+}
+
+/* Text floats slightly upward */
+.banner:hover .bannerContent {
+    transform: translateY(-5px);
 }
