@@ -4,28 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Disaster Information</title>
+        <link rel="stylesheet" href="general.css">
         <script src="js/navigation.js" defer></script>
         <script src="js/disaster_info.js" defer></script>
+        <script src="js/alertsbutton.js" defer></script>
+        <script src="js/breadcrumbs.js" defer></script>
     </head>
 
-    <header class="headerTitle"></header>
-    <div id="navBar"> </div>
+    <body>
+        <header class="headerTitle">
+            WORLD DISASTER MANAGEMENT ORGANISATION
+            <button type="button" id = 'alert'>Signup for alerts!</button>
+        </header>
 
-    <div>
-        <h2>World Disaster Management Organisation</h2></h1>
-        <button type="button">Signup for alerts!</button>
-    </div>
+        <div id="navwrapper"> </div>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+            <ol id="breadcrumbList"></ol>
+        </nav>
 
-    <main>
-        <p> SPECIFIC DISASTER INFORMATION </p>
+        <main>
+            <p> SPECIFIC DISASTER INFORMATION </p>
 
-        <p> dynamically load advice information based on which image is clicked, like this:</p>
-        <div id="disasterContent"></div>
+            <p> dynamically load advice information based on which image is clicked, like this:</p>
+            <div id="disasterContent"></div>
 
-        
-    </main>
-    <footer>
-        <small><i>Copyright &copy; 2025 G13 Liam Barry, Luca Harper-Daude </i></small>
-    </footer>
+            
+        </main>
+
+        <footer>
+            <small><i>Copyright &copy; 2025 G13 Liam Barry, Luca Harper-Daude </i></small>
+        </footer>
+    
+    </body>
     
 </html>

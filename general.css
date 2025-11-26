@@ -256,3 +256,7 @@ footer small {
 .banner:hover .bannerContent {
     transform: translateY(-5px);
 }
+
+.bannerLink {
+    text-decoration: none;
+}

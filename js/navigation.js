@@ -4,7 +4,7 @@ function loadHeader() {
     let displayContent =
     `
         <nav id="navBar">
-                    <div id="navLeft">
+            <div id="navLeft">
                 <ul id="navList">
                     <li class="navigation"><input id="searchBar" type="text" placeholder="Search.."></li>
                     <li class="navigation"><a href="index.html">Home</a></li> |

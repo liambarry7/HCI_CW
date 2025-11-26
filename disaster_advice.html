@@ -4,67 +4,77 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Disaster Advice</title>
+        <link rel="stylesheet" href="general.css">
         <script src="js/navigation.js" defer></script>
         <script src="js/disaster_advice.js" defer></script>
+        <script src="js/alertsbutton.js" defer></script>
+        <script src="js/breadcrumbs.js" defer></script>
     </head>
 
-    <header class="headerTitle"></header>
-    <div id="navBar"> </div>
+    <body>
+        <header class="headerTitle">
+            WORLD DISASTER MANAGEMENT ORGANISATION
+            <button type="button" id = 'alert'>Signup for alerts!</button>
+        </header>
 
-    <div>
-        <h2>World Disaster Management Organisation</h2></h1>
-        <button type="button">Signup for alerts!</button>
-    </div>
+        <div id="navwrapper"> </div>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+            <ol id="breadcrumbList"></ol>
+        </nav>
 
-    <main>
-        <h2>World Disaster Management Organisation</h2>
-        <p> DISASTER ADVICE </p>
+        <main>
+            <h2>World Disaster Management Organisation</h2>
+            <p> DISASTER ADVICE </p>
 
-        <p> 9 images to click on to get information for 8 different disasters, and 1 quizzes image/button</p>
-        
-        <!-- input type="image" src="images/wildfire.jpg"/> -->
+            <p> 9 images to click on to get information for 8 different disasters, and 1 quizzes image/button</p>
+            
+            <!-- input type="image" src="images/wildfire.jpg"/> -->
 
-        <a href="disaster_info.html?type=wildfire">
-            <img src="images/wildfire.jpg">
-        </a>
+            <a href="disaster_info.html?type=wildfire">
+                <img src="images/wildfire.jpg">
+            </a>
 
-        <a href="disaster_info.html?type=tsunami">
-            <img src="images/tsunami.jpg">
-        </a>
+            <a href="disaster_info.html?type=tsunami">
+                <img src="images/tsunami.jpg">
+            </a>
 
-        <a href="disaster_info.html?type=earthquake">
-            <img src="images/earthquake.jpg">
-        </a>
+            <a href="disaster_info.html?type=earthquake">
+                <img src="images/earthquake.jpg">
+            </a>
 
-        <a href="disaster_info.html?type=flood">
-            <img src="images/flood.jpg">
-        </a>
+            <a href="disaster_info.html?type=flood">
+                <img src="images/flood.jpg">
+            </a>
 
-        <a href="disaster_info.html?type=activeWarzone">
-            <img src="images/activewarzone.jpg">
-        </a>
+            <a href="disaster_info.html?type=activeWarzone">
+                <img src="images/activewarzone.jpg">
+            </a>
 
-        <a href="disaster_info.html?type=industrialAccident">
-            <img src="images/industrialaccident.jpeg">
-        </a>
+            <a href="disaster_info.html?type=industrialAccident">
+                <img src="images/industrialaccident.jpeg">
+            </a>
 
-        <a href="disaster_info.html?type=publicHealthEmergencies">
-            <img src="images/publichealthemergencies.jpg">
-        </a>
+            <a href="disaster_info.html?type=publicHealthEmergencies">
+                <img src="images/publichealthemergencies.jpg">
+            </a>
 
-        <a href="disaster_info.html?type=hurricane">
-            <img src="images/hurricane.jpg">
-        </a>
+            <a href="disaster_info.html?type=hurricane">
+                <img src="images/hurricane.jpg">
+            </a>
 
-        <a href="disaster_info.html?type=educationalContent">
-            <img src="images/educationalcontent.jpg">
-        </a>
+            <a href="disaster_info.html?type=educationalContent">
+                <img src="images/educationalcontent.jpg">
+            </a>
 
-        <div class="info-section"></div>
-        
-    </main>
-    <footer>
-        <small><i>Copyright &copy; 2025 G13 Liam Barry, Luca Harper-Daude </i></small>
-    </footer>
-    
+            <div class="info-section"></div>
+            
+        </main>
+
+        <footer>
+            <small><i>Copyright &copy; 2025 G13 Liam Barry, Luca Harper-Daude </i></small>
+            <p> https://webaim.org/resources/contrastchecker/</p>        
+        </footer>
+
+    </body>
+
 </html>
