@@ -11,10 +11,12 @@ const disasterData = {
         <h1>Flood Safety</h1>
         <p>Move to higher ground immediately...</p>
     `,
+
     earthquake: `
         <h1>Earthquake Safety</h1>
         <p>Drop, Cover, Hold On...</p>
     `,
+    
     wildfire: `
         <h1>Wildfire Safety</h1>
         <p>Be ready to evacuate...</p>
@@ -53,7 +55,7 @@ const disasterData = {
 
 function loadDisasterContent(type) {
     const content = disasterData[type] || "<p>No info found.</p>";
-    document.getElementById("disaster-content").innerHTML = content;
+    document.getElementById("disasterContent").innerHTML = content;
 }
 
 loadDisasterContent(disasterType);

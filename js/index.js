@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "images/regional.jpg",
         "regional_info.html"
     );
-});
+});           
 
 function createBanner(title, text, image, link) {
     return `
