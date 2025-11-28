@@ -269,6 +269,14 @@ footer small {
     text-decoration: none;
 }
 
+#disasterAdviceContent {
+    padding: 10px 50px;
+}
+
+#disasterAdviceContent h2, p {
+    margin: 0 0 10px 5px;
+}
+
 #disasterWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -320,50 +328,55 @@ footer small {
 
 /* ++++++++++++ */
 #gridcontainer {
-    background-color: #6666666b;
+    background-color: inherit;
 
     display: grid;
-    width: 100%;
-    
-    grid-template-areas: 
-        "a b"
-        "c d"
-        "e f";
+    gap: 20px;
+    grid-template-rows: auto auto auto; /* height on each row */
 
-    gap: 15px;
-
-    grid-template-columns: 1fr 2fr; /* width of each column - 1fr and 2fr = 1/3 free space, 2/3 of free space */
-    grid-template-rows: 100px 300px 200px; /* height on each row */
 }
 
 .gridItem {
-    background-color: #0073e6;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 5px;
+/*     
+    display: flex;
+    flex-direction: column;
+    justify-content: center; */
+
 }
 
-.g1 {
-    grid-area: a;
+.gridItem img {
+    width: 400px;
+    Height: 300px;
+    border-radius: 20px;
 }
 
-.g2 {
-    grid-area: b;
+.gridItem h3, ol {
+    margin: 0 0 10px 0;
 }
 
-.g3 {
-    grid-area: c;
+.row1, .row2, .row3 {
+    display: grid;
+    gap: 30px;
+    
+    /* background-color: red; */
 }
 
-.g4 {
-    grid-area: d;
+.row1 {
+    grid-template-columns: 2fr 0.5fr;
 }
 
-.g5 {
-    grid-area: e;
+.row2 {
+    grid-template-columns: 1fr 2fr;
 }
 
-.g6 {
-    grid-area: f;
+.row3 {
+    grid-template-columns: 2fr 0.5fr;
 }
-
 
 button#submit {
     background-color: #1563ff;
