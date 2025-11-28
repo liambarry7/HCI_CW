@@ -50,7 +50,7 @@ const disasterData = {
     educationalContent: `
         <h1>Educational content</h1>
         <p>quiz quiz quiz!</p>
-    `,
+        `,
 };
 
 function loadDisasterContent(type) {
