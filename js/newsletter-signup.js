@@ -1,19 +1,43 @@
-const navBar = document.getElementById('nav');
-function loadHeader() {
-    let displayContent =
-    `
-        <nav id="nav_bar">
-            <ul>
-                <input type="text" placeholder="Search..">
-                <li class="navigation active"><a href="index.html">Home</a></li>
-                <li class="navigation"><a href="disaster_advice.html">Disaster Advice</a></li>
-                <li class="navigation"><a href="ema.html">Emergancy Medical Advice</a></li>
-                <li class="navigation"><a href="regional_info.html">Region Info</a></li>
-            </ul>
-        </nav>
-    `;
+const submitButton = document.getElementById('submit');
 
-    navBar.innerHTML = displayContent;
+submitButton.addEventListener('click', getDetails);
+
+function getDetails() {
+    // Get values *inside* the function so they update correctly
+    const fName = document.querySelector('input[name="fname"]').value.trim();
+    const sName = document.querySelector('input[name="lname"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
+
+    let missing = [];
+
+    if (!fName) missing.push("First name");
+    if (!sName) missing.push("Last name");
+    if (!email) missing.push("Email");
+
+    if (missing.length > 0) {
+        alert("Please fill in: " + missing.join(", "));
+        return false;
+    }
+
+    alert("Registration Successful!");
 }
 
-window.addEventListener("DOMContentLoaded", loadHeader, false);
+function UntoggleDonate(){
+    entry = document.querySelector("#amount");
+    entry.innerHTML = ` `;
+}
+
+function toggleDonate(){
+    entry = document.querySelector("#amount");
+    
+    entry.innerHTML = `
+    <Label>Enter Amount: £GBP per month
+        <input type="number" value="0.00">
+    </Label>`;
+}
+
+const donation = document.querySelector("#yes");
+donation.addEventListener("click", toggleDonate);
+
+const no = document.querySelector("#no");
+no.addEventListener("click", UntoggleDonate);

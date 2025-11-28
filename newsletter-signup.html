@@ -3,38 +3,65 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Newsletter Signup</title>
+        <title>Home page</title>
+        <link rel="stylesheet" href="general.css">
+        <script src="js/navigation.js" defer></script>
         <script src="js/newsletter-signup.js" defer></script>
         <script src="js/alertsbutton.js" defer></script>
+        <script src="js/breadcrumbs.js" defer></script>
+        <script src="https://kit.fontawesome.com/7cff7141e7.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <header class="headerTitle">
-            <h1>World Disaster Management Organisation</h1>
+            WORLD DISASTER MANAGEMENT ORGANISATION
+            <button type="button" id = 'alert'>Signup for alerts!</button>
         </header>
-
-        <div id="nav"></div>
-        <p id = 'res'></p>
+        <div id="navwrapper"> </div>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+            <ol id="breadcrumbList"></ol>
+        </nav>
 
         <main>
-            <h2> Newsletter Signup Form </h2>
-
-            <button type="'button" id="alert">signup for alert</button>
-
+            <h2>Join our Newsletter! </h2>
             <div id="'form">
-                <form>
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname"><br>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname"><br>
-                    <label for="lname">Email:</label><br>
-                    <input type="text" id="email" name="email"><br>
-                </form>
+                <fieldset>
+                    <legend>Register Here</legend>
+                    <form>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname"><br>
+                        <label for="lname">Email:</label><br>
+                        <input type="text" id="email" name="email"><br>
+                    </form>
+                </fieldset>
+
             </div>
-            
+
+            <div id="radioMenu">
+                <fieldset>
+                    <legend>Would You Like to Donate to help fund our cause? <i class="fa-solid fa-hand-holding-heart"></i></legend>
+                        <Label class="donation" for="yes"> Yes
+                            <input type="radio" name="radio" id="yes"/>
+                            <span class="checkmark"></span>
+                        </Label>
+                        <div id="amount"></div>
+                        <Label class="donation" for="no"> No
+                            <input type="radio" name="radio" id = "no" checked="checked"/>
+                            <span class="checkmark"></span>
+                        </Label>
+                    </fieldset>
+             </div>
+
+             <button type="button" id = 'submit'>Submit Details</button>
         </main>
+
+
         <footer>
             <small><i>Copyright &copy; 2025 G13 Liam Barry, Luca Harper-Daude </i></small>
+            <p> https://webaim.org/resources/contrastchecker/</p>
+
         </footer>
     </body>
 
