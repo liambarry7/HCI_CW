@@ -27,9 +27,6 @@ cards.push(card7);
 cards.push(card8);
 cards.push(card9);
 
-
-
-
 const wrapperContent = document.getElementById("disasterWrapper");
 
 function loadContent() {
@@ -46,7 +43,7 @@ function loadContent() {
         `;
     })
     displayItem = displayItem.join("");
-    console.log(displayItem);
+    // console.log(displayItem);
     wrapperContent.innerHTML = displayItem;
 }
 
