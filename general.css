@@ -196,7 +196,6 @@ footer small {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* dark overlay for readability */
 .banner::before {
     content: "";
     position: absolute;
@@ -366,3 +365,99 @@ footer small {
 }
 
 
+button#submit {
+    background-color: #1563ff;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    width: 10%;
+    margin: 10px;
+}
+
+#form, #radioMenu {
+    background: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Fieldset styling */
+fieldset {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Text inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,102,204,0.3);
+}
+
+/* Donation radio styles */
+.donation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.donation input[type="radio"] {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+/* Submit button */
+#submit {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background: #0066cc;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#submit:hover {
+    background: #004999;
+    transform: scale(1.05);
+}
+
+#submit:active {
+    transform: scale(0.98);
+}
