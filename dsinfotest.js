@@ -34,11 +34,16 @@ const disasterContent = document.getElementById("disasterContent");
 function loadContent() {
     if (queriedDisaster) {
         disasterContent.innerHTML = `
-            <div>
-                <p>CONTENT</p>
-                <h2>${queriedDisaster.type}</h2>
-                <p>${queriedDisaster.description}</p>
-                <img src="${queriedDisaster.img1}">
+            <div id="tcontainer">
+                <div class="tdiv1">
+                    <h2>${queriedDisaster.type}</h2>
+                    <p>${queriedDisaster.description}</p>
+                </div>
+                <div class="tdiv2">
+                    <img src="${queriedDisaster.img1}">
+                </div>
+                
+                
                 <p>${queriedDisaster.advicePoints}</p>
                 <iframe src="${queriedDisaster.videoLink}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
                 <p>${queriedDisaster.riskFactors}</p>

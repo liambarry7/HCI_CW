@@ -317,3 +317,52 @@ footer small {
     color: inherit; /* inherit style from parent element */
     display: block;
 }
+
+
+/* ++++++++++++ */
+#gridcontainer {
+    background-color: #6666666b;
+
+    display: grid;
+    width: 100%;
+    
+    grid-template-areas: 
+        "a b"
+        "c d"
+        "e f";
+
+    gap: 15px;
+
+    grid-template-columns: 1fr 2fr; /* width of each column - 1fr and 2fr = 1/3 free space, 2/3 of free space */
+    grid-template-rows: 100px 300px 200px; /* height on each row */
+}
+
+.gridItem {
+    background-color: #0073e6;
+}
+
+.g1 {
+    grid-area: a;
+}
+
+.g2 {
+    grid-area: b;
+}
+
+.g3 {
+    grid-area: c;
+}
+
+.g4 {
+    grid-area: d;
+}
+
+.g5 {
+    grid-area: e;
+}
+
+.g6 {
+    grid-area: f;
+}
+
+
