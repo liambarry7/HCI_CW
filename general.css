@@ -533,25 +533,41 @@ input[type="text"]:focus {
 
 /* Submit button */
 #popupSubmit {
-    background: #0066cc;
+    background: #1c9b00;
     color: white;
 }
 
 #popupSubmit:hover {
-    background: #0052a3;
+    background: #6aff49;
 }
 
 /* Close button */
 #popupClose {
-    background: #ddd;
+    background: #ff0000;
 }
 
 #popupClose:hover {
-    background: #ccc;
+    background: #ff9a9a;
 }
 
 /* Fade animation */
 @keyframes fadeIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+.switch-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* Text size dropdown */
+#textSize {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
 }

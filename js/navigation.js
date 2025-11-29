@@ -21,6 +21,25 @@ function loadHeader() {
     `;
 
     navBar.innerHTML = displayContent;
+
+    
+    const settingsButton = document.getElementById("settingsButton");
+    const settingsPopup = document.getElementById("settingsPopup");
+    const settingsClose = document.getElementById("settingsClose");
+    const settingsSave = document.getElementById("settingsSave");
+
+    settingsButton.addEventListener("click", () => {
+        settingsPopup.style.display = "flex";
+    });
+
+    settingsClose.addEventListener("click", () => {
+        settingsPopup.style.display = "none";
+    });
+
+    settingsSave.addEventListener("click", () => {
+        settingsPopup.style.display = "none";
+        alert("Settings saved!");
+    });
 }
 
 window.addEventListener("DOMContentLoaded", loadHeader, false);
