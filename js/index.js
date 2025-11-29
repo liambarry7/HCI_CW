@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "EMERGENCY MEDICAL ADVICE",
         "Find critical medical help and first-aid guidance.",
         "images/medical.png",
-        "medical_advice.html"
+        "ema.html"
     );
 
     regional.innerHTML = createBanner(

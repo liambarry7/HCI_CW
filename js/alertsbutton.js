@@ -1,17 +1,28 @@
-alert_button = document.getElementById('alert')
-alert_button.addEventListener('click',show_alert_popup)
+const alertButton = document.getElementById('alert');
+const popup = document.getElementById('alertPopup');
+const closeBtn = document.getElementById('popupClose');
+const submitBtn = document.getElementById('popupSubmit');
 
-function show_alert_popup(){
-    let text;
-    let signup = prompt("Please Enter your name: ")
-    let email = prompt("Please Enter your email: ")
-    let phone = prompt("Please Enter your phone number: ")
+alertButton.addEventListener('click', () => {
+    popup.style.display = "flex";
+});
 
-    if(signup =='' || email == '' || phone == ''){
-        window.alert('Signup Failed')
-    } else {
-        text = 'Signup Successful'
+closeBtn.addEventListener('click', () => {
+    popup.style.display = "none";
+});
+
+submitBtn.addEventListener('click', () => {
+    const name = document.getElementById('popupName').value.trim();
+    const email = document.getElementById('popupEmail').value.trim();
+    const phone = document.getElementById('popupPhone').value.trim();
+    const result = document.getElementById('popupResult');
+
+    if (name === "" || email === "" || phone === "") {
+        result.style.color = "red";
+        result.textContent = "All fields must be filled!";
+        return;
     }
 
-    document.getElementById('res').innerHTML = text
-}
+    result.style.color = "green";
+    result.textContent = "Signup Successful!";
+});
