@@ -327,12 +327,18 @@ footer small {
 
 
 /* ++++++++++++ */
+#disasterContent h2 {
+    text-transform: uppercase;
+}
 #gridcontainer {
     background-color: inherit;
 
     display: grid;
     gap: 20px;
     grid-template-rows: auto auto auto; /* height on each row */
+
+    /* justify-items: center;   horizontal centering of items
+    align-items: center; */
 
 }
 
@@ -342,6 +348,8 @@ footer small {
     border-radius: 20px;
     padding: 10px 15px;
     margin: 5px;
+
+    align-content: center;
 /*     
     display: flex;
     flex-direction: column;
@@ -355,8 +363,12 @@ footer small {
     border-radius: 20px;
 }
 
-.gridItem h3, ol {
-    margin: 0 0 10px 0;
+.gridItem ol {
+    margin: 2px 0 10px 0;
+}
+
+.gridItem h3 {
+    margin: 5px 0 5px 0;
 }
 
 .row1, .row2, .row3 {
@@ -367,7 +379,7 @@ footer small {
 }
 
 .row1 {
-    grid-template-columns: 2fr 0.5fr;
+    grid-template-columns: 2fr .5fr;
 }
 
 .row2 {
@@ -571,3 +583,4 @@ input[type="text"]:focus {
     border-radius: 6px;
     border: 1px solid #aaa;
 }
+ 

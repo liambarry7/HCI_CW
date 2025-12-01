@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Educational page</title>
+        <link rel="stylesheet" href="general.css">
+        <script src="js/navigation.js" defer></script>
+        <script src="js/alertsbutton.js" defer></script>
+        <script src="js/breadcrumbs.js" defer></script>
+    </head>
+
+    <body>
+        <header class="headerTitle">
+            WORLD DISASTER MANAGEMENT ORGANISATION
+            <button type="button" id = 'alert'>Signup for alerts!</button>
+        </header>
+
+        <div id="alertPopup" class="popup">
+            <div class="popup-content">
+                <h2>Signup for Alerts</h2>
+
+                <label>Name:</label>
+                <input type="text" id="popupName">
+
+                <label>Email:</label>
+                <input type="text" id="popupEmail">
+
+                <label>Phone Number:</label>
+                <input type="text" id="popupPhone">
+
+                <div class="popup-buttons">
+                    <button id="popupSubmit">Submit</button>
+                    <button id="popupClose">Cancel</button>
+                </div>
+
+                <p id="popupResult"></p>
+            </div>
+        </div>
+
+        <div id="navwrapper"> </div>
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+            <ol id="breadcrumbList"></ol>
+        </nav>
+
+        <main>
+            <div>
+                <h2> quiz quiz quiz</h2>
+                <p>no content</p>
+            </div>
+            
+        </main>
+
+        <footer>
+            <small><i>Copyright &copy; 2025 G13 Liam Barry, Luca Harper-Daude </i></small>
+            <p> https://webaim.org/resources/contrastchecker/</p>
+
+        </footer>
+    </body>
+
+</html>
