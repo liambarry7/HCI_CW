@@ -326,7 +326,6 @@ footer small {
 }
 
 
-/* ++++++++++++ */
 #disasterContent h2 {
     text-transform: uppercase;
 }
@@ -583,4 +582,41 @@ input[type="text"]:focus {
     border-radius: 6px;
     border: 1px solid #aaa;
 }
- 
+
+#quiz {
+    display: grid;
+    background-color: #8cf1f8;
+    margin: 100px;
+}
+
+#answerSet {
+    display: grid;
+    background-color: #0059b3;
+
+}
+
+.answerBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.answerBox:hover {
+    background-color: palevioletred;
+}
+
+.answerBox:selected {
+    background-color: yellow;
+}
+
+.answerBox label {
+    margin: 0;
+    width: 100%;
+    /* flex-grow: 1; */
+
+}
+
+.answerBox input {
+    display: none;
+}

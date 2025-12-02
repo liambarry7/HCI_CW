@@ -23,17 +23,17 @@ const quiz = document.getElementById("quiz");
 
 function loadQuizQuestion() {
     quiz.innerHTML = `
-        <div class="quiz">
+        <div id="quiz">
             <h3 id="questionTitle">${questions[questionCount].question}</h3>
             
             <div id="answerSet">
                 <div class="answerBox">
                     <input type="radio" id="a" name="disasterQuiz" value="${questions[questionCount].options[0]}">
-                    <label for="a">${questions[questionCount].options[0]}</label><br>
+                    <label for="a">${questions[questionCount].options[0]}</label>
                 </div>
                 <div class="answerBox">
                     <input type="radio" id="b" name="disasterQuiz" value="${questions[questionCount].options[1]}">
-                    <label for="b">${questions[questionCount].options[1]}</label><br>
+                    <label for="b">${questions[questionCount].options[1]}</label>
                 </div>
                 <div class="answerBox">
                     <input type="radio" id="c" name="disasterQuiz" value="${questions[questionCount].options[2]}">
@@ -43,7 +43,9 @@ function loadQuizQuestion() {
                     <input type="radio" id="d" name="disasterQuiz" value="${questions[questionCount].options[3]}">
                     <label for="d">${questions[questionCount].options[3]}</label>
                 </div>
+                <p class="quizError">Please choose an answer</p>
                 <button type="submit" onclick="myFunction()" id="quizSubmit" class="optionSubmit">Submit</button>
+
             </div>
         </div>
         `;               
@@ -84,7 +86,7 @@ function myFunction() {
         }
 
         // turn submit button into a continue button, show correct answer until btn clicked
-        
+
 
         // load next question
         if (questionCount+1 < questions.length) {
