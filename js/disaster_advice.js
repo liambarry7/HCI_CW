@@ -14,7 +14,7 @@ const card5 = new cardInfo("activeWarzone", "Active Warzone Advice", "images/act
 const card6 = new cardInfo("industrialAccident", "Industrial Accident Advice", "images/industrialaccident.jpeg");
 const card7 = new cardInfo("publicHealthEmergencies", "Public Health Emergencies Advice", "images/publichealthemergencies.jpg");
 const card8 = new cardInfo("hurricane", "Hurricane & Typhoon Advice", "images/hurricane.jpg");
-const card9 = new cardInfo("educationalContent", "Educational Content", "images/educationalcontent.jpg");
+const card9 = new cardInfo("educational", "Educational Content", "images/educationalcontent.jpg");
 
 const cards = []
 cards.push(card1);
@@ -31,16 +31,30 @@ const wrapperContent = document.getElementById("disasterWrapper");
 
 function loadContent() {
     let displayItem = cards.map( (item) => {
-        return `
-        <div class="disasterCard">
-            <a href="disaster_info.html?type=${item.type}">
-                <img src="${item.img}" class="disasterCardImage">
-                <div class="disasterContainer">
-                    <h4><b>${item.title}</b></h4>
-                </div>
-            </a>
-        </div>
-        `;
+        if (item.type != "educational") {
+            return `
+            <div class="disasterCard">
+                <a href="disaster_info.html?type=${item.type}">
+                    <img src="${item.img}" class="disasterCardImage">
+                    <div class="disasterContainer">
+                        <h4><b>${item.title}</b></h4>
+                    </div>
+                </a>
+            </div>
+            `;
+        } else {
+            return `
+            <div class="disasterCard">
+                <a href="${item.type}.html">
+                    <img src="${item.img}" class="disasterCardImage">
+                    <div class="disasterContainer">
+                        <h4><b>${item.title}</b></h4>
+                    </div>
+                </a>
+            </div>
+            `;
+        }
+        
     })
     displayItem = displayItem.join("");
     // console.log(displayItem);
