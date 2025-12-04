@@ -5,17 +5,57 @@ class cardInfo {
         this.img = img;
     }
 }
-/*
-const card1 = new cardInfo("Wildfire", "Wildfire Advice", "images/wildfire.jpg");
-const card2 = new cardInfo("Tsunami", "Tsunami Advice", "images/tsunami.jpg");
-const card3 = new cardInfo("Earthquake", "Earthquake Advice", "images/earthquake.jpg");
-const card4 = new cardInfo("Flood", "Flood Advice", "images/flood.jpg");
-const card5 = new cardInfo("ActiveWarzone", "Active Warzone Advice", "images/activewarzone.jpg");
-const card6 = new cardInfo("IndustrialAccident", "Industrial Accident Advice", "images/industrialaccident.jpeg");
-const card7 = new cardInfo("PublicHealthEmergencies", "Public Health Emergencies Advice", "images/publichealthemergencies.jpg");
-const card8 = new cardInfo("Hurricane", "Hurricane Advice", "images/hurricane.jpg");
+
+const card1 = new cardInfo(
+    "SevereBleeding",
+    "Treating Severe Bleeding",
+    "images/SevereBleeding.jpg"
+);
+
+const card2 = new cardInfo(
+    "CPR",
+    "Performing CPR (Adult & Child)",
+    "images/CPR.jpg"
+);
+
+const card3 = new cardInfo(
+    "Fractures",
+    "Managing Fractures & Broken Bones",
+    "images/fractures.jpg"
+);
+
+const card4 = new cardInfo(
+    "Burns",
+    "First Aid for Burns (Minor to Severe)",
+    "images/burns.jpg"
+);
+
+const card5 = new cardInfo(
+    "UnconsciousPerson",
+    "Helping an Unconscious Person",
+    "images/unconscious.jpg"
+);
+
+const card6 = new cardInfo(
+    "Choking",
+    "Choking: Adult, Child, and Infant",
+    "images/choking.jpg"
+);
+
+const card7 = new cardInfo(
+    "Shock",
+    "Recognizing & Treating Shock",
+    "images/shock.jpg"
+);
+
+const card8 = new cardInfo(
+    "HeadInjury",
+    "Dealing with Head & Spine Injuries",
+    "images/head-injury.jpg"
+);
+
 const card9 = new cardInfo("EducationalContent", "Educational Content", "images/educationalcontent.jpg");
-*/
+
 
 
 const cards = []
