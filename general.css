@@ -606,8 +606,16 @@ input[type="text"]:focus {
     background-color: palevioletred;
 }
 
-.answerBox:selected {
+.selected {
     background-color: yellow;
+}
+
+.correct {
+    background-color: greenyellow;
+}
+
+.wrong {
+    background-color: red;
 }
 
 .answerBox label {
