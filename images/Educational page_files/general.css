@@ -645,9 +645,9 @@ input[type="text"]:focus {
 .answerBox:hover {
     /* background-color: palevioletred; */
     
-    border-color: #2d90f4ad; 
+    border-color: #ff02c0bc; 
     border-radius: 8px;
-    box-shadow: 0 0 10px #2d90f4ad;
+    box-shadow: 0 0 10px #ff02c0bc;
     transition: box-shadow 0.1s ease, border-color 0.1s ease;
 }
 
@@ -678,19 +678,5 @@ input[type="text"]:focus {
 }
 
 .optionSubmit {
-    background-color: #334ceebc;
-    margin: 10px 40%;
-    padding: 10px;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 550;
-}
-
-.optionSubmit:hover {
-        background-color: #334cee5c;
-}
-
-.optionSubmit:disabled {
-        background-color: #334cee14;
+    background-color: #cb0fe4;
 }
