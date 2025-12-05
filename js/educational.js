@@ -50,7 +50,7 @@ const questions = [
 
 // set up question counts
 console.log("no of questions: " + questions.length)
-let questionCount = 0;
+let questionCount = 7;
 let correctCount = 0;
 
 const quiz = document.getElementById("quiz");
@@ -59,7 +59,7 @@ function loadQuizQuestion() {
     quiz.innerHTML = `
         
             <h3 id="questionTitle">${questions[questionCount].question}</h3>
-            <p>Question: ${questionCount+1}/${questions.length}</p>
+            <p class="quizP">Question: ${questionCount+1}/${questions.length}</p>
             
             <div id="answerSet">
                 <div class="answerBox" onclick="selectedAnswer(this)">
@@ -176,12 +176,6 @@ function selectedAnswer(selectedBox) {
     selectedBox.classList.add("selected"); 
 }
 
-function loadResults() {
-    quiz.innerHTML = `
-        <h3>results</h3>
-        <p>${correctCount} / ${questions.length}</p>
-    `;
-}
 
 
 
@@ -198,3 +192,45 @@ function loadResults() {
     - add a start button to begin the quiz?
     - make a leaderboard of top 10 scores?
 **/
+
+
+
+
+function loadResults() {
+
+    quiz.innerHTML = `
+        <h3 id="questionTitle">Your results from the quiz:</h3>
+        <p class="resultsP">You scored ${correctCount} / ${questions.length}!</p>
+        <div>
+            <canvas id="myChart" width="200" height="100"></canvas>
+        </div>
+    `;
+
+    const xValues = ["Correct", "Incorrect"];
+    // const yValues = [correctCount, questions.length-correctCount];
+    const yValues = [5, 3];
+
+    const barColors = [
+    "#00ff0dff",
+    "#f71111ff"
+    ];
+
+    new Chart("myChart", {
+    type: "doughnut",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+            title: {
+            display: true,
+            text: "World Wide Wine Production 2018"
+            }
+        }
+    });
+
+    
+}
