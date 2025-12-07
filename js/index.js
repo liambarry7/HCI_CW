@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "REGIONAL INFORMATION",
         "View local alerts and updates for your area.",
         "images/regional.jpg",
-        "regional_info.html"
+        "regions.html"
     );
 });           
 
