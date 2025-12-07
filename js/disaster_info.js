@@ -1,18 +1,3 @@
-// class Disaster {
-//     constructor(type, description, advicePoints, riskFactors, medicalAdvice, img1, img2, videoLink) {
-//         this.type = type;
-//         this.description = description;
-//         this.advicePoints = advicePoints;
-//         this.riskFactors = riskFactors;
-//         this.medicalAdvice = medicalAdvice;
-//         this.img1 = img1;
-//         this.img2 = img2;
-//         this.videoLink = videoLink;
-//     }
-// }
-
-// const wildfire = new Disaster("wildfire", "a description of a wildfire.", "some advice points", "some risk factors", "some medical advice", "images/placeholder.jpg", "images/placeholder.jpg", "https://www.youtube.com/embed/ahotOBqUoKI");
-// const tsunami = new Disaster("tsunami", "a description of a tsunami.", "some advice points", "some risk factors", "some medical advice", "images/placeholder.jpg", "images/placeholder.jpg", "https://www.youtube.com/embed/7EDflnGzjTY");
 
 class Disaster {
     constructor(type, title, desc1, desc2, advicePoints, riskFactors, usefulLinks, img1, img2, videoLink) {

@@ -54,7 +54,7 @@ const card8 = new cardInfo(
     "images/head-injury.jpg"
 );
 
-const card9 = new cardInfo("EducationalContent", "Educational Content", "images/educationalcontent.jpg");
+const card9 = new cardInfo("educational", "Educational Content", "images/educationalcontent.jpg");
 
 
 
@@ -73,16 +73,30 @@ const wrapperContent = document.getElementById("disasterWrapper");
 
 function loadContent() {
     let displayItem = cards.map( (item) => {
-        return `
-        <div class="disasterCard">
-            <a href="disaster_info.html?type=${item.type}">
-                <img src="${item.img}" class="disasterCardImage">
-                <div class="disasterContainer">
-                    <h4><b>${item.title}</b></h4>
-                </div>
-            </a>
-        </div>
-        `;
+        if (item.type != "educational") {
+            return `
+            <div class="disasterCard">
+                <a href="ema_info.html?type=${item.type}">
+                    <img src="${item.img}" class="disasterCardImage">
+                    <div class="disasterContainer">
+                        <h4><b>${item.title}</b></h4>
+                    </div>
+                </a>
+            </div>
+            `;
+        } else {
+            return `
+            <div class="disasterCard">
+                <a href="${item.type}.html">
+                    <img src="${item.img}" class="disasterCardImage">
+                    <div class="disasterContainer">
+                        <h4><b>${item.title}</b></h4>
+                    </div>
+                </a>
+            </div>
+            `;
+        }
+        
     })
     displayItem = displayItem.join("");
     // console.log(displayItem);
