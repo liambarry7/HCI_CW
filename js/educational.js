@@ -50,7 +50,7 @@ const questions = [
 
 // set up question counts
 console.log("no of questions: " + questions.length)
-let questionCount = 7;
+let questionCount = 0;
 let correctCount = 0;
 
 const quiz = document.getElementById("quiz");

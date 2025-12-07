@@ -25,6 +25,10 @@ body {
     font-weight: bold;
 }
 
+#smallNav {
+    display: none;
+}
+
 #navBar {
     padding: 0.75rem 1rem;
     display: flex;
@@ -135,7 +139,7 @@ footer {
     margin-top: auto;
 
     padding: 1rem 0;
-    margin-top: 2rem;
+    margin-top: 3rem;
 
     /* position: fixed; */
     bottom: 0;
@@ -329,6 +333,7 @@ footer small {
 #disasterContent h2 {
     text-transform: uppercase;
 }
+
 #gridcontainer {
     background-color: inherit;
 
@@ -583,6 +588,11 @@ input[type="text"]:focus {
     border: 1px solid #aaa;
 }
 
+
+#quizContent h2 {
+    margin: 0 5px;
+}
+
 #quiz {
     display: grid;
     background-color: #f2f2f2;
@@ -698,7 +708,6 @@ input[type="text"]:focus {
 
 #myChart {
     max-width: 300px;
-    /* margin: 10px 100px 20px 100px; */
     margin: 20px auto;
     display: block;
 }
@@ -707,4 +716,111 @@ input[type="text"]:focus {
     text-align: center;
     margin: 0;
     padding: 0px 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+    #navBar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #navLeft {
+        display: none;
+    }
+
+    #settingsButton {
+        display: none;
+    }
+
+    #smallNav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    #smallSearchBar {
+        flex: 1;
+        margin: 10px 200px 10px 0;
+    }
+
+    #smallNavList {
+        display: none;
+        flex-direction: column;
+    }
+
+    #smallNavList.show {
+        display: flex;
+    }
+
+    #smallNav {
+        display: flex;
+        align-items: center;
+    }
+
+    
+
+    #hamburger {
+        background-color: white;
+        margin-left: auto;
+    }
+
+    #smallSettingsButton {
+        padding: 10px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+    }
+
+    #smallSettingsButton :hover{
+        background-color: #0059b3;   
+        border-radius: 6px;
+    }
+
+    #smallSettingsIcon {
+        width: 26px;
+        height: 26px;
+    }
+
+    
+
+    /* make grid into single column on disaster info */
+    #gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    
+    .row1, .row2, .row3 {
+        display: contents; 
+    }
+
+    .gridItem {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: left; 
+    }
+
+    
+    .gridItem img {
+        max-width: 100%;
+        height: auto; 
+    }
+
+    .gridItem iframe {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    /* resize quiz */
+    #quiz {
+        margin: 15px 15%;
+    }
+
 }
