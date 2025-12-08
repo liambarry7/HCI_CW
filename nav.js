@@ -9,20 +9,25 @@ function loadHeader() {
                 
                 
 
+               
+
+                <div id="hamburger-wrapper">
+
+                    <a id="hamburger" onclick="toggleBurger()">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                    
+                    <div id="smallNavList">
+                        <a href="index.html" class="smallNavigation">Home</a>
+                        <a href="disaster_advice.html" class="smallNavigation">Disaster Advice</a>
+                        <a href="ema.html" class="smallNavigation">Emergency Medical Advice</a>
+                        <a href="regional_info.html" class="smallNavigation">Region Info</a>
+                    </div>
+                </div>
+
                 <button id="smallSettingsButton">
                     <img id="settingsIcon" src="images/settings.png">
                 </button>
-
-                <a id="hamburger" onclick="abc()">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
-
-                <ul id="smallNavList">
-                    <li class="navigation"><a href="index.html">Home</a></li>
-                    <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li>
-                    <li class="navigation"><a href="ema.html">Emergency Medical Advice</a></li>
-                    <li class="navigation"><a href="regional_info.html">Region Info</a></li>
-                </ul>
             </div>
 
             <div id="navLeft">            
@@ -43,22 +48,20 @@ function loadHeader() {
 
     navBar.innerHTML = displayContent;
 
-    const hamburger = document.getElementById("hamburger");
-    const mobileNavList = document.getElementById("smallNavList");
+    // const hamburger = document.getElementById("hamburger");
+    // const smallNavList = document.getElementById("smallNavList");
 
-    hamburger.addEventListener("click", () => {
-        mobileNavList.classList.toggle("show");
-    });
+    // hamburger.addEventListener("click", () => {
+    //     smallNavList.classList.toggle("show");
+    // });
 }
 
 window.addEventListener("DOMContentLoaded", loadHeader, false);
 
-function abc() {
-    var x = document.getElementById("smallNavList");
-    if (x.style.display === "block") {
-    x.style.display = "none";
-    } else {
-    x.style.display = "block";
-    }
+function toggleBurger() {
+    document.getElementById("smallNavList").classList.toggle("show");
+    document.getElementById("smallSearchBar").classList.toggle("hide");
+    // document.getElementById("smallSettingsButton").classList.toggle("hide");
+
 }
 

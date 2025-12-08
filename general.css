@@ -718,12 +718,15 @@ input[type="text"]:focus {
     padding: 0px 10px;
 }
 
-@media screen and (max-width: 600px) {
 
+
+@media screen and (max-width: 600px) {
+    
     #navBar {
-        display: flex;
+        /* display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 10px; */
+        /* height: 104px; */
     }
     
     #navLeft {
@@ -736,38 +739,58 @@ input[type="text"]:focus {
 
     #smallNav {
         display: flex;
+        position: relative;
+        margin: 10px 0 10px 0;
         align-items: center;
         width: 100%;
     }
 
     #smallSearchBar {
-        flex: 1;
+        /* flex: 1; */
         margin: 10px 200px 10px 0;
     }
 
     #smallNavList {
         display: none;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+        top: 10px;
     }
 
     #smallNavList.show {
         display: flex;
     }
 
-    #smallNav {
-        display: flex;
-        align-items: center;
+    #navBar a.smallNavigation {
+        /* background-color: blue; */
+        font-size: 13px;
     }
 
     
 
+    
+
+    .hide {
+        display: none;
+    }
+    
+
     #hamburger {
+        position: absolute;
+        top: 10px;
+        right: 10px;
         background-color: white;
         margin-left: auto;
     }
 
     #smallSettingsButton {
-        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 60px;
+        padding: 8px;
         cursor: pointer;
         background: none;
         border: none;
@@ -783,6 +806,10 @@ input[type="text"]:focus {
     #smallSettingsIcon {
         width: 26px;
         height: 26px;
+    }
+
+    .breadcrumbs {
+        display: none;
     }
 
     
