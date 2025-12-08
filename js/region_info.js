@@ -24,8 +24,37 @@ const reg = params.get("type"); // get the type from url params
 console.log(reg);
 
 //  set which object to load
-const queriedDisaster = regions.find(d => d.type == reg) // returns the full object if matched
-if (queriedDisaster) {
-    console.log(queriedDisaster);
-    console.log(queriedDisaster.description);
+const queriedregion = regions.find(d => d.type == reg) // returns the full object if matched
+if (queriedregion) {
+    console.log(queriedregion);
+    console.log(queriedregion.description);
 }
+
+const regionContent = document.getElementById('regionContent')
+
+function loadcontent() {
+
+    const disasterLinks = queriedregion.disasters.map((disaster, i) => {
+        return `<li><a href="${queriedregion.usefulLinks[i]}">${disaster}</a></li>`;
+    }).join('');
+
+    regionContent.innerHTML = `
+        <h2>${queriedregion.title}</h2>
+
+        <div class="region-images">
+            <img src="${queriedregion.img1}">
+            <img src="${queriedregion.img2}">
+        </div>
+
+        <p class="region-description">${queriedregion.desc1}</p>
+
+        <div class="disaster-section">
+            <h3>Potential Disasters</h3>
+            <ul>
+                ${disasterLinks}
+            </ul>
+        </div>
+    `;
+}
+
+window.addEventListener("DOMContentLoaded", loadcontent, false);
