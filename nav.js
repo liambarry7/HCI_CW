@@ -31,7 +31,8 @@ function loadHeader() {
                     <li class="navigation"><a href="index.html">Home</a></li> |
                     <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li> |
                     <li class="navigation"><a href="ema.html">Emergency Medical Advice</a></li> |
-                    <li class="navigation"><a href="regional_info.html">Region Info</a></li>
+                    <li class="navigation"><a href="regional_info.html">Region Info</a></li> |
+                    <li class="navigation"><a href="newsletter-signup.html">Newsletter Signup</a></li>
                 </ul>
             </div>
 
