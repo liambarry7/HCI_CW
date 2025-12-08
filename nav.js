@@ -6,10 +6,6 @@ function loadHeader() {
 
             <div id="smallNav">                    
                 <input id="smallSearchBar" type="text" placeholder="Search..">
-                
-                
-
-               
 
                 <div id="hamburger-wrapper">
 
@@ -36,8 +32,7 @@ function loadHeader() {
                     <li class="navigation"><a href="index.html">Home</a></li> |
                     <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li> |
                     <li class="navigation"><a href="ema.html">Emergency Medical Advice</a></li> |
-                    <li class="navigation"><a href="regional_info.html">Region Info</a></li> |
-                    <li class="navigation"><a href="newsletter-signup.html">Newsletter Signup</a></li>
+                    <li class="navigation"><a href="regional_info.html">Region Info</a></li>
                 </ul>
             </div>
 
@@ -49,12 +44,44 @@ function loadHeader() {
 
     navBar.innerHTML = displayContent;
 
-    // const hamburger = document.getElementById("hamburger");
-    // const smallNavList = document.getElementById("smallNavList");
+    // for normal nav settings button:
+    const settingsButton = document.getElementById("settingsButton");
+    const settingsPopup = document.getElementById("settingsPopup");
+    const settingsClose = document.getElementById("settingsClose");
+    const settingsSave = document.getElementById("settingsSave");
 
-    // hamburger.addEventListener("click", () => {
-    //     smallNavList.classList.toggle("show");
+    settingsButton.addEventListener("click", () => {
+        settingsPopup.style.display = "flex";
+    });
+
+    settingsClose.addEventListener("click", () => {
+        settingsPopup.style.display = "none";
+    });
+
+    settingsSave.addEventListener("click", () => {
+        settingsPopup.style.display = "none";
+        alert("Settings saved!");
+    });
+
+    // for small screen nav settings button:
+    const smallSettingsButton = document.getElementById("smallSettingsButton");
+    // const smallSettingsPopup = document.getElementById("settingsPopup");
+    // const smallSettingsClose = document.getElementById("settingsClose");
+    // const smallSettingsSave = document.getElementById("settingsSave");
+
+    smallSettingsButton.addEventListener("click", () => {
+        settingsPopup.style.display = "flex";
+    });
+
+    // settingsClose.addEventListener("click", () => {
+    //     settingsPopup.style.display = "none";
     // });
+
+    // settingsSave.addEventListener("click", () => {
+    //     settingsPopup.style.display = "none";
+    //     alert("Settings saved!");
+    // });
+
 }
 
 window.addEventListener("DOMContentLoaded", loadHeader, false);
