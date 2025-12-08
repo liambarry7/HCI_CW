@@ -33,7 +33,7 @@ function loadContent() {
         if (item.type != "educational") {
             return `
             <div class="disasterCard">
-                <a href="disaster_info.html?type=${item.type}">
+                <a href="region_info.html?type=${item.type}">
                     <img src="${item.img}" class="disasterCardImage">
                     <div class="disasterContainer">
                         <h4><b>${item.title}</b></h4>
