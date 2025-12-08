@@ -17,7 +17,7 @@ function loadHeader() {
                         <a href="index.html" class="smallNavigation">Home</a>
                         <a href="disaster_advice.html" class="smallNavigation">Disaster Advice</a>
                         <a href="ema.html" class="smallNavigation">Emergency Medical Advice</a>
-                        <a href="regional_info.html" class="smallNavigation">Region Info</a>
+                        <a href="regions.html" class="smallNavigation">Region Info</a>
                     </div>
                 </div>
 
@@ -32,7 +32,7 @@ function loadHeader() {
                     <li class="navigation"><a href="index.html">Home</a></li> |
                     <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li> |
                     <li class="navigation"><a href="ema.html">Emergency Medical Advice</a></li> |
-                    <li class="navigation"><a href="regional_info.html">Region Info</a></li>
+                    <li class="navigation"><a href="regions.html">Region Info</a></li>
                 </ul>
             </div>
 
@@ -65,22 +65,10 @@ function loadHeader() {
 
     // for small screen nav settings button:
     const smallSettingsButton = document.getElementById("smallSettingsButton");
-    // const smallSettingsPopup = document.getElementById("settingsPopup");
-    // const smallSettingsClose = document.getElementById("settingsClose");
-    // const smallSettingsSave = document.getElementById("settingsSave");
 
     smallSettingsButton.addEventListener("click", () => {
         settingsPopup.style.display = "flex";
     });
-
-    // settingsClose.addEventListener("click", () => {
-    //     settingsPopup.style.display = "none";
-    // });
-
-    // settingsSave.addEventListener("click", () => {
-    //     settingsPopup.style.display = "none";
-    //     alert("Settings saved!");
-    // });
 
 }
 
