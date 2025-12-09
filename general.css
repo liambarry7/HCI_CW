@@ -866,14 +866,8 @@ footer a{
     text-decoration-color: white;
 }
 
-/* 1090px */
-
-@media screen and (max-width: 600px) {
-    
-    .region-images {
-        flex-direction: column;
-    }
-
+@media screen and (max-width: 1090px) {
+    /* Where navbar begins to break/squish */
     #navLeft {
         display: none;
     }
@@ -892,6 +886,7 @@ footer a{
 
     #smallSearchBar {
         margin: 10px 200px 10px 0;
+        max-width: 50%;
     }
 
     #smallNavList {
@@ -946,12 +941,18 @@ footer a{
         width: 26px;
         height: 26px;
     }
+}
+
+@media screen and (max-width: 600px) {
+    /* For smallest screens */
+
+    #smallSearchBar {
+        max-width: none;
+    }
 
     .breadcrumbs {
         display: none;
     }
-
-    
 
     /* make grid into single column on disaster info */
     #gridcontainer {
@@ -987,6 +988,10 @@ footer a{
     /* resize quiz */
     #quiz {
         margin: 15px 15%;
+    }
+
+    .region-images {
+        flex-direction: column;
     }
 
     .footerGrid {
