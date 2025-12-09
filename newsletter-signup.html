@@ -20,6 +20,34 @@
             <button type="button" id = 'alert'>Signup for alerts!</button>
         </header>
 
+        <svg height="0" width="0">
+            <filter id="protanopia">
+                <feColorMatrix type="matrix"
+                    values="0.567 0.433 0     0 0
+                            0.558 0.442 0     0 0
+                            0     0.242 0.758 0 0
+                            0     0     0     1 0"/>
+            </filter>
+
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix"
+                    values="0.625 0.375 0     0 0
+                            0.7   0.3   0     0 0
+                            0     0.3   0.7   0 0
+                            0     0     0     1 0"/>
+            </filter>
+
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix"
+                    values="0.95  0.05  0     0 0
+                            0     0.433 0.567 0 0
+                            0     0.475 0.525 0 0
+                            0     0     0     1 0"/>
+            </filter>
+        </svg>
+
+
+        <!-- Alert Signup Popup -->
         <div id="alertPopup" class="popup">
             <div class="popup-content">
                 <h2>Signup for Alerts</h2>
@@ -39,6 +67,39 @@
                 </div>
 
                 <p id="popupResult"></p>
+            </div>
+        </div>
+
+        <div id="settingsPopup" class="popup">
+            <div class="popup-content">
+                <h2>Settings</h2>
+
+                <label>Text Size:</label>
+                <select id="textSize">
+                    <option value="normal">Normal</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">Extra Large</option>
+                </select>
+
+                <label>Language:</label> <!-- Not functional at the moment-->
+                <select id="lang">
+                    <option value="eng">English</option>
+                    <option value="span">Spanish</option>
+                    <option value="man">Mandarin</option>
+                </select>
+
+                <label>Colorblind Mode:</label>
+                <select id="colorblindMode">
+                    <option value="off">Off</option>
+                    <option value="protanopia">Protanopia</option>
+                    <option value="deuteranopia">Deuteranopia</option>
+                    <option value="tritanopia">Tritanopia</option>
+                </select>
+
+                <div class="popup-buttons">
+                    <button id="settingsSave">Save</button>
+                    <button id="settingsClose">Close</button>
+                </div>
             </div>
         </div>
         
