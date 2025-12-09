@@ -1,49 +1,49 @@
 const questions = [
     {
-        question: "Where were wildfires most common in 2024?",
-        options: ["Australia", "China", "Portugal", "USA"],
+        question: "Whate were wildfires most common in 2024?",
+        options: ["South America", "Africa", "Asia", "Oceania"],
         answer: "a",
     },
 
     {
-        question: "Which statement is false?",
-        options: ["Node.js is open-source", "Node.js is frontend", "Node.js is backend", "Node supports custom modules"],
+        question: "Which country is most likely to flood?",
+        options: ["Jamaca", "China", "Japan", "England"],
         answer: "b"
     },
 
     {
-        question: "Who won the 2006 F1 World Championship?",
-        options: ["Kimi Raikkonen", "Jenson Button", "Fernando Alonso", "Giancarlo Fisichella"],
+        question: "What should you do in the event of a earthquake?",
+        options: ["Go outside", "Stop, drop and roll", "Drop, cover and hold on", "run to the nearest hill"],
         answer: "c"
     },
 
     {
-        question: "Which driver raced for lotus in 2012?",
-        options: ["Nico Hulkenburg", "Nico Rosberg", "Timo Glock", "Romain Grosjean"],
+        question: "What is used to assist choking?",
+        options: ["Heimriche manoeuvre", "Recovery position", "Jaw thurst", "Heimlich manoeuvre"],
         answer: "d"
     },
 
     {
-        question: "Who won the 2012 Spanish GP?",
-        options: ["Fernando Alonso", "Pastor Maldonado", "Sebastian Vettel", "Lewis Hamilton"],
-        answer: "b"
-    },
-
-    {
-        question: "Who is the only team to win the constructors championship their debut season?",
-        options: ["Ferrari", "Williams", "Mclaren", "Brawn GP"],
+        question: "What is unlikely to cause burns?",
+        options: ["Chemicals", "Electricity", "Heat", "Cold water"],
         answer: "d"
     },
 
     {
-        question: "Which driver has 32 Victories?",
-        options: ["Fernando Alonso", "Sterling Moss", "Niki Lauda", "James Hunt"],
+        question: "What disaster is will not occur in Europe?",
+        options: ["Typhoons", "Floods", "Industrial Accidents", "Wildfires"],
         answer: "a"
     },
 
     {
-        question: "Who won the 2023 conference league final?",
-        options: ["Roma", "Fiorientina", "West Ham United", "Olympiacos"],
+        question: "What pace should you pump someones chest at in CPR?",
+        options: ["40-60 bpms", "100-120 bpms", "160-180 bpms", "90-95 bpms"],
+        answer: "b"
+    },
+
+    {
+        question: "What type of disaster are you most at risk to if you live in low lying coastal areas?",
+        options: ["Wildfires", "Public Health Emergencies", "Tsunamis", "Active Warzone"],
         answer: "c"
     }
 ];
@@ -78,8 +78,8 @@ function loadQuizQuestion() {
                     <input type="radio" id="d" name="disasterQuiz" value="${questions[questionCount].options[3]}">
                     <label for="d">${questions[questionCount].options[3]}</label>
                 </div>
-                <p class="quizError">Please choose an answer</p>
-                <button type="button" onclick="myFunction()" id="quizSubmit" class="optionSubmit">Submit</button>
+                <p id="quizError">Please choose an answer.</p>
+                <button type="button" onclick="submitAnswer(); unselectedError()" id="quizSubmit" class="optionSubmit">Submit</button>
 
             </div>
         
@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", loadQuizQuestion, false);
 
 
 // submit button - to next question or submit final answers
-function myFunction() {
+function submitAnswer() {
     console.log("question no:" + questionCount);
     console.log("correct: " + correctCount);
     console.log(document.getElementById('a').checked || document.getElementById('b').checked || document.getElementById('c').checked || document.getElementById('d').checked) //to check if an item is selected
@@ -176,9 +176,19 @@ function selectedAnswer(selectedBox) {
     selectedBox.classList.add("selected"); 
 }
 
+function unselectedError() {
+    var selected = false;
+    console.log(document.getElementById('a').checked || document.getElementById('b').checked || document.getElementById('c').checked || document.getElementById('d').checked) //to check if an item is selected
+    var errorMsg = document.getElementById("quizError");
 
 
-
+    if (!document.getElementById('a').checked && !document.getElementById('b').checked && !document.getElementById('c').checked && !document.getElementById('d').checked) {
+        // if all items are unselected when submit pressed, show error
+        errorMsg.style.visibility = "visible";
+    } else {
+        errorMsg.style.visibility = "hidden";
+    }
+}
 
 
 /** Quiz:
