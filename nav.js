@@ -47,10 +47,17 @@ function loadHeader() {
     // for normal nav settings button:
     const settingsButton = document.getElementById("settingsButton");
     const settingsPopup = document.getElementById("settingsPopup");
+    const smallSettingsButton = document.getElementById("smallSettingsButton");
     const settingsClose = document.getElementById("settingsClose");
     const settingsSave = document.getElementById("settingsSave");
+    const textSizeSelector = document.getElementById("textSize");
 
+    // 3. Add event listeners
     settingsButton.addEventListener("click", () => {
+        settingsPopup.style.display = "flex";
+    });
+
+    smallSettingsButton.addEventListener("click", () => {
         settingsPopup.style.display = "flex";
     });
 
@@ -59,40 +66,64 @@ function loadHeader() {
     });
 
     settingsSave.addEventListener("click", () => {
+        const size = textSizeSelector.value;
+        applyTextSize(size);
+        localStorage.setItem("textSize", size);
         settingsPopup.style.display = "none";
-        alert("Settings saved!");
     });
+
+    // 4. Load saved value on startup
+    const savedSize = localStorage.getItem("textSize");
+    if (savedSize) applyTextSize(savedSize);
 
     
-// Grab toggle element
-const largeTextToggle = document.getElementById("largeTextToggle");
+    // Grab toggle element
+    const largeTextToggle = document.getElementById("largeTextToggle");
 
-// Apply saved text size on page load
-if (localStorage.getItem("largeTextEnabled") === "true") {
-    document.documentElement.classList.add("large-text");
-    if (largeTextToggle) largeTextToggle.checked = true;
-}
+    // Apply saved text size on page load
+    if (localStorage.getItem("largeTextEnabled") === "true") {
+        document.documentElement.classList.add("large-text");
+        if (largeTextToggle) largeTextToggle.checked = true;
+    }
 
-// When user toggles it ON/OFF
-if (largeTextToggle) {
-    largeTextToggle.addEventListener("change", () => {
+    // When user toggles it ON/OFF
+    if (largeTextToggle) {
+        largeTextToggle.addEventListener("change", () => {
 
-        if (largeTextToggle.checked) {
-            document.documentElement.classList.add("large-text");
-            localStorage.setItem("largeTextEnabled", "true");
-        } else {
-            document.documentElement.classList.remove("large-text");
-            localStorage.setItem("largeTextEnabled", "false");
-        }
+            if (largeTextToggle.checked) {
+                document.documentElement.classList.add("large-text");
+                localStorage.setItem("largeTextEnabled", "true");
+            } else {
+                document.documentElement.classList.remove("large-text");
+                localStorage.setItem("largeTextEnabled", "false");
+            }
 
-    });
-}
+        });
+    }
 
-    // for small screen nav settings button:
-    const smallSettingsButton = document.getElementById("smallSettingsButton");
+        // for small screen nav settings button:
 
-    smallSettingsButton.addEventListener("click", () => {
-        settingsPopup.style.display = "flex";
+        smallSettingsButton.addEventListener("click", () => {
+            settingsPopup.style.display = "flex";
+        });
+
+    const colorblindDropdown = document.getElementById("colorblindMode");
+
+    // Apply saved colorblind mode on startup
+    const savedColorblind = localStorage.getItem("colorblindMode");
+    if (savedColorblind) applyColorblindMode(savedColorblind);
+
+    // Save button functionality — add this to your settingsSave listener
+    settingsSave.addEventListener("click", () => {
+        const size = textSizeSelector.value;
+        applyTextSize(size);
+        localStorage.setItem("textSize", size);
+
+        const cbMode = colorblindDropdown.value;
+        applyColorblindMode(cbMode);
+        localStorage.setItem("colorblindMode", cbMode);
+
+        settingsPopup.style.display = "none";
     });
 
 }
@@ -104,5 +135,28 @@ function toggleBurger() {
     document.getElementById("smallSearchBar").classList.toggle("hide");
     // document.getElementById("smallSettingsButton").classList.toggle("hide");
 
+}
+
+function applyTextSize(size) {
+    document.documentElement.classList.remove("text-normal", "text-large", "text-xlarge");
+    document.documentElement.classList.add(`text-${size}`);
+}
+
+function applyColorblindMode(mode) {
+    document.documentElement.classList.remove(
+        "cb-protanopia", 
+        "cb-deuteranopia", 
+        "cb-tritanopia"
+    );
+
+    if (mode === "protanopia") {
+        document.documentElement.classList.add("cb-protanopia");
+    } 
+    else if (mode === "deuteranopia") {
+        document.documentElement.classList.add("cb-deuteranopia");
+    } 
+    else if (mode === "tritanopia") {
+        document.documentElement.classList.add("cb-tritanopia");
+    }
 }
 

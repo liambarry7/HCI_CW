@@ -790,14 +790,21 @@ input[type="text"]:focus {
     transform: translateX(4px);
 }
 
-html.large-text {
-    font-size: 120%;
+/* Settings Toggles */
+.text-normal { font-size: 100%; }
+.text-large { font-size: 120%; }
+.text-xlarge { font-size: 140%; }
+
+.cb-protanopia {
+    filter: url("#protanopia");
 }
 
-html.large-text p,
-html.large-text a,
-html.large-text li {
-    line-height: 1.5;
+.cb-deuteranopia {
+    filter: url("#deuteranopia");
+}
+
+.cb-tritanopia {
+    filter: url("#tritanopia");
 }
 
 @media screen and (max-width: 600px) {
