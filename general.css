@@ -790,6 +790,16 @@ input[type="text"]:focus {
     transform: translateX(4px);
 }
 
+html.large-text {
+    font-size: 120%;
+}
+
+html.large-text p,
+html.large-text a,
+html.large-text li {
+    line-height: 1.5;
+}
+
 @media screen and (max-width: 600px) {
     
     #navBar {

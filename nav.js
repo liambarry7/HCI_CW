@@ -63,6 +63,31 @@ function loadHeader() {
         alert("Settings saved!");
     });
 
+    
+// Grab toggle element
+const largeTextToggle = document.getElementById("largeTextToggle");
+
+// Apply saved text size on page load
+if (localStorage.getItem("largeTextEnabled") === "true") {
+    document.documentElement.classList.add("large-text");
+    if (largeTextToggle) largeTextToggle.checked = true;
+}
+
+// When user toggles it ON/OFF
+if (largeTextToggle) {
+    largeTextToggle.addEventListener("change", () => {
+
+        if (largeTextToggle.checked) {
+            document.documentElement.classList.add("large-text");
+            localStorage.setItem("largeTextEnabled", "true");
+        } else {
+            document.documentElement.classList.remove("large-text");
+            localStorage.setItem("largeTextEnabled", "false");
+        }
+
+    });
+}
+
     // for small screen nav settings button:
     const smallSettingsButton = document.getElementById("smallSettingsButton");
 
