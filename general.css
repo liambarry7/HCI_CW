@@ -807,20 +807,73 @@ input[type="text"]:focus {
     filter: url("#tritanopia");
 }
 
+.newsletter {
+    margin: 0 30%;
+    border-color: white; 
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.newsletter:hover {
+    border-color: #f4a82dad; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px #f4a82dad;
+    transition: box-shadow 0.1s ease, border-color 0.1s ease;
+
+    transform: scale(1.03);
+    box-shadow: 0 0 10px 10px #f4a82dad;
+}
+
+
+.newsletterLink a, .newsletterLink h2 {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+/* .newsletterLink a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    
+} */
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footerGrid h2 {
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+    text-decoration: underline;
+}
+
+.footerLinks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerLinks a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+/* 1090px */
+
 @media screen and (max-width: 600px) {
     
-    #navBar {
-        /* display: flex;
-        align-items: center;
-        gap: 10px; */
-        /* height: 104px; */
-    }
-
     .region-images {
         flex-direction: column;
     }
 
-    
     #navLeft {
         display: none;
     }
@@ -838,7 +891,6 @@ input[type="text"]:focus {
     }
 
     #smallSearchBar {
-        /* flex: 1; */
         margin: 10px 200px 10px 0;
     }
 
@@ -857,13 +909,8 @@ input[type="text"]:focus {
     }
 
     #navBar a.smallNavigation {
-        /* background-color: blue; */
         font-size: 13px;
     }
-
-    
-
-    
 
     .hide {
         display: none;
@@ -940,6 +987,16 @@ input[type="text"]:focus {
     /* resize quiz */
     #quiz {
         margin: 15px 15%;
+    }
+
+    .footerGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .newsletter {
+        margin: 0 10%;
     }
 
 }
