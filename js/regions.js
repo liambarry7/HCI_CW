@@ -14,6 +14,7 @@ card5 = new cardInfo('sa', 'South America', 'images/sa.jpg')
 card6 = new cardInfo('wa', 'West Africa', 'images/wa.jpg')
 card7 = new cardInfo('ea', 'East Africa', 'images/ea.jpg')
 card8 = new cardInfo('ca', 'Central Asia', 'images/ca.jpg')
+card9 = new cardInfo('eas', 'East Asia', 'images/eas.jpg')
 
 const regions = []
 
@@ -25,6 +26,7 @@ regions.push(card5)
 regions.push(card6)
 regions.push(card7)
 regions.push(card8)
+regions.push(card9)
 
 wrapperContent = document.getElementById('disasterWrapper')
 
