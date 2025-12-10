@@ -52,7 +52,7 @@ function loadHeader() {
     const settingsSave = document.getElementById("settingsSave");
     const textSizeSelector = document.getElementById("textSize");
 
-    // 3. Add event listeners
+    // Add event listeners
     settingsButton.addEventListener("click", () => {
         settingsPopup.style.display = "flex";
     });
@@ -72,7 +72,7 @@ function loadHeader() {
         settingsPopup.style.display = "none";
     });
 
-    // 4. Load saved value on startup
+    // Load saved value on startup
     const savedSize = localStorage.getItem("textSize");
     if (savedSize) applyTextSize(savedSize);
 
@@ -101,11 +101,11 @@ function loadHeader() {
         });
     }
 
-        // for small screen nav settings button:
+    // for small screen nav settings button:
 
-        smallSettingsButton.addEventListener("click", () => {
-            settingsPopup.style.display = "flex";
-        });
+    smallSettingsButton.addEventListener("click", () => {
+        settingsPopup.style.display = "flex";
+    });
 
     const colorblindDropdown = document.getElementById("colorblindMode");
 
@@ -159,4 +159,3 @@ function applyColorblindMode(mode) {
         document.documentElement.classList.add("cb-tritanopia");
     }
 }
-
