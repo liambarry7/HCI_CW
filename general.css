@@ -1015,10 +1015,8 @@ footer a{
     position: absolute;
     top: 60px; /* push below the nav bar */
     right: 10px;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(6px);
+    background: rgba(83, 83, 83);
     padding: 12px;
-    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
@@ -1028,8 +1026,8 @@ footer a{
     transform: translateY(-10px);
     pointer-events: none;
 
-    transition: opacity 0.25s ease, transform 0.25s ease;
     z-index: 1000;
+    border: solid black 1px;
     }
 
 

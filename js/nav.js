@@ -6,7 +6,6 @@ function loadHeader() {
 
             <div id="smallNav">                    
                 <input id="smallSearchBar" type="text" placeholder="Search..">
-
                 <div id="hamburger-wrapper">
 
                     <a id="hamburger" onclick="toggleBurger()">
@@ -134,9 +133,6 @@ window.addEventListener("DOMContentLoaded", loadHeader, false);
 
 function toggleBurger() {
     document.getElementById("smallNavList").classList.toggle("show");
-    document.getElementById("smallSearchBar").classList.toggle("hide");
-    // document.getElementById("smallSettingsButton").classList.toggle("hide");
-
 }
 
 function applyTextSize(size) {
