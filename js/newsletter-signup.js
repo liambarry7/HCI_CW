@@ -2,6 +2,8 @@ const submitButton = document.getElementById('submit');
 
 submitButton.addEventListener('click', getDetails);
 
+const email_regex = /^\S+@\S+\.\S+$/;
+
 function getDetails() {
     // Get values *inside* the function so they update correctly
     const fName = document.querySelector('input[name="fname"]').value.trim();
@@ -17,6 +19,9 @@ function getDetails() {
     if (missing.length > 0) {
         alert("Please fill in: " + missing.join(", "));
         return false;
+    } else if (!email_regex.test(email)) {
+        alert("Please enter a valid email")
+        return false
     }
 
     alert("Registration Successful!");

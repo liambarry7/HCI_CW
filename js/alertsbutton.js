@@ -3,6 +3,9 @@ const popup = document.getElementById('alertPopup');
 const closeBtn = document.getElementById('popupClose');
 const submitBtn = document.getElementById('popupSubmit');
 
+email_regex = /^\S+@\S+\.\S+$/;
+phone_regex = /^\d+$/;
+
 alertButton.addEventListener('click', () => {
     popup.style.display = "flex";
 });
@@ -20,6 +23,14 @@ submitBtn.addEventListener('click', () => {
     if (name === "" || email === "" || phone === "") {
         result.style.color = "red";
         result.textContent = "All fields must be filled!";
+        return;
+    } else if (!email_regex.test(email)){
+        result.style.color = "red";
+        result.textContent = "Invalid Email";
+        return;
+    } else if (!phone_regex.test(phone)){
+        result.style.color = "red";
+        result.textContent = "Invalid Phone Number";
         return;
     }
 
