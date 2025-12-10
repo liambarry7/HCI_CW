@@ -1011,4 +1011,45 @@ footer a{
         margin: 0 10%;
     }
 
+    #smallNavList {
+    position: absolute;
+    top: 60px; /* push below the nav bar */
+    right: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 12px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 1000;
+    }
+
+
+    #smallNavList a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        padding: 6px 10px;
+        border-radius: 5px;
+    }
+
+    #smallNavList a:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* When menu is open */
+    #smallNavList.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
 }
