@@ -4,8 +4,12 @@ function loadHeader() {
     `
         <nav id="navBar">
 
-            <div id="smallNav">                    
-                <input id="smallSearchBar" type="text" placeholder="Search..">
+            <div id="smallNav">    
+                <div id="search">                
+                    <input id="smallSearchBar" type="text" placeholder="Search..">
+                    <button type="button" onclick="simpleSearch()"><i class="fa fa-search"></i></button>
+                </div>
+                
                 <div id="hamburger-wrapper">
 
                     <a id="hamburger" onclick="toggleBurger()">
@@ -28,7 +32,11 @@ function loadHeader() {
 
             <div id="navLeft">            
                 <ul id="navList">
-                    <li class="navigation"><input id="searchBar" type="text" placeholder="Search.."></li>
+                    <li id="search" class="navigation">
+                        <input id="searchBar" type="text" placeholder="Search..">
+                        <button type="button" onclick="simpleSearch()"><i class="fa fa-search"></i></button>
+                    </li>
+                    
                     <li class="navigation"><a href="index.html">Home</a></li> |
                     <li class="navigation active"><a href="disaster_advice.html">Disaster Advice</a></li> |
                     <li class="navigation"><a href="ema.html">Emergency Medical Advice</a></li> |

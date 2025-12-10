@@ -36,4 +36,13 @@ submitBtn.addEventListener('click', () => {
 
     result.style.color = "green";
     result.textContent = "Signup Successful!";
+
+    setTimeout(() => {
+        document.getElementById('popupName').value = "";
+        document.getElementById('popupEmail').value = "";
+        document.getElementById('popupPhone').value = "";
+        document.getElementById('popupResult').textContent = "";
+        popup.style.display = "none";
+        }, 2000);
+    
 });
