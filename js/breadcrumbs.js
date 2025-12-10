@@ -1,20 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const breadcrumbList = document.getElementById("breadcrumbList");
 
-    // Detect current page
     const currentPage = formatPageName(window.location.pathname);
 
     if (isHomePage()) {
         sessionStorage.setItem("breadcrumbs", JSON.stringify(["Home"]));
     }
 
-    // Load breadcrumbs (after possible reset)
     let visited = JSON.parse(sessionStorage.getItem("breadcrumbs")) || ["Home"];
 
-    if (!visited.includes(currentPage)) {
+    if (!visited.includes(currentPage)) { //remove duplicates
     visited.push(currentPage);
     } else {
-        // Remove duplicates and re-append current page at the end (correct order)
         visited = visited.filter(page => page !== currentPage);
         visited.push(currentPage);
     }
@@ -41,15 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// --- Helper Functions ---
-
-// Check if current page is the home page
+//check if current page is the home page for reset
 function isHomePage() {
     const file = window.location.pathname.split("/").pop();
     return file === "" || file === "index.html"; 
 }
 
-// Convert file path → readable name
 function formatPageName(path) {
     let file = path.split("/").pop(); 
     if (file === "" || file === "index.html") return "Home";
@@ -59,13 +53,11 @@ function formatPageName(path) {
     return capitalizeWords(file);
 }
 
-// Convert name back into its file link
 function pageToFile(name) {
     if (name === "Home") return "index.html";
     return name.toLowerCase().replace(/ /g, "_") + ".html";
 }
 
-// Capitalize each word
 function capitalizeWords(str) {
     return str.replace(/\b\w/g, c => c.toUpperCase());
 }
