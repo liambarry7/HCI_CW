@@ -156,7 +156,7 @@ function submitAnswer() {
         
     } else {
         // display error message
-        // -> if user clicks on radio after message, make it disappear
+        // - if user clicks on radio after message, make it disappear
         console.log("No answer selected.")
     }
 
@@ -177,7 +177,6 @@ function selectedAnswer(selectedBox) {
 }
 
 function unselectedError() {
-    var selected = false;
     console.log(document.getElementById('a').checked || document.getElementById('b').checked || document.getElementById('c').checked || document.getElementById('d').checked) //to check if an item is selected
     var errorMsg = document.getElementById("quizError");
 
@@ -190,22 +189,6 @@ function unselectedError() {
     }
 }
 
-
-/** Quiz:
-    - 8 questions at random (one for each disaster), 4 options per answer
-    - have clickable banners/buttons that change colour when selected
-    - have an accept button to confirm answer
-    - keep a live score in corner of right/wrong answers
-    - 
-    - Looks like this: https://www.geeksforgeeks.org/javascript/create-a-quiz-app-with-timer-using-html-css-and-javascript/
-    
-    - add a start button to begin the quiz?
-    - make a leaderboard of top 10 scores?
-**/
-
-
-
-
 function loadResults() {
 
     quiz.innerHTML = `
@@ -217,7 +200,6 @@ function loadResults() {
     `;
 
     const xValues = ["Correct", "Incorrect"];
-    // const yValues = [correctCount, questions.length-correctCount];
     const yValues = [5, 3];
 
     const barColors = [

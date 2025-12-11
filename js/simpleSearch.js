@@ -1,9 +1,4 @@
 function simpleSearch() {
-    // *** Only works on live server ***
-
-    // add search icon to bar - https://www.w3schools.com/css/tryit.asp?filename=trycss_form_icon
-    // add a search button to fire the search
-
     // get input from search bar - determine which id based on window size
     let searchID = null;
     if (screen.width > 1090) {
