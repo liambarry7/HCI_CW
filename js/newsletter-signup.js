@@ -25,6 +25,7 @@ function getDetails() {
     }
 
     alert("Registration Successful!");
+    window.location.assign("index.html");
 }
 
 function UntoggleDonate(){
