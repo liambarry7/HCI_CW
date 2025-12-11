@@ -53,7 +53,6 @@ function loadHeader() {
 
     navBar.innerHTML = displayContent;
 
-    // for normal nav settings button:
     const settingsButton = document.getElementById("settingsButton");
     const settingsPopup = document.getElementById("settingsPopup");
     const smallSettingsButton = document.getElementById("smallSettingsButton");
@@ -61,7 +60,6 @@ function loadHeader() {
     const settingsSave = document.getElementById("settingsSave");
     const textSizeSelector = document.getElementById("textSize");
 
-    // Add event listeners
     settingsButton.addEventListener("click", () => {
         settingsPopup.style.display = "flex";
     });
@@ -81,21 +79,17 @@ function loadHeader() {
         settingsPopup.style.display = "none";
     });
 
-    // Load saved value on startup
-    const savedSize = localStorage.getItem("textSize");
+    const savedSize = localStorage.getItem("textSize"); //Load saved settings
     if (savedSize) applyTextSize(savedSize);
 
     
-    // Grab toggle element
     const largeTextToggle = document.getElementById("largeTextToggle");
 
-    // Apply saved text size on page load
     if (localStorage.getItem("largeTextEnabled") === "true") {
         document.documentElement.classList.add("large-text");
         if (largeTextToggle) largeTextToggle.checked = true;
     }
 
-    // When user toggles it ON/OFF
     if (largeTextToggle) {
         largeTextToggle.addEventListener("change", () => {
 
@@ -110,19 +104,15 @@ function loadHeader() {
         });
     }
 
-    // for small screen nav settings button:
-
     smallSettingsButton.addEventListener("click", () => {
         settingsPopup.style.display = "flex";
     });
 
     const colorblindDropdown = document.getElementById("colorblindMode");
 
-    // Apply saved colorblind mode on startup
     const savedColorblind = localStorage.getItem("colorblindMode");
     if (savedColorblind) applyColorblindMode(savedColorblind);
 
-    // Save button functionality — add this to your settingsSave listener
     settingsSave.addEventListener("click", () => {
         const size = textSizeSelector.value;
         applyTextSize(size);
@@ -139,6 +129,8 @@ function loadHeader() {
 
 window.addEventListener("DOMContentLoaded", loadHeader, false);
 
+
+//Helper functions
 function toggleBurger() {
     document.getElementById("smallNavList").classList.toggle("show");
 }
