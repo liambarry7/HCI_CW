@@ -58,7 +58,7 @@ function loadContent() {
         
     })
     displayItem = displayItem.join("");
-    // console.log(displayItem);
+
     wrapperContent.innerHTML = displayItem;
 }
 

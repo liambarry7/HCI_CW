@@ -5,7 +5,6 @@ submitButton.addEventListener('click', getDetails);
 const email_regex = /^\S+@\S+\.\S+$/;
 
 function getDetails() {
-    // Get values *inside* the function so they update correctly
     const fName = document.querySelector('input[name="fname"]').value.trim();
     const sName = document.querySelector('input[name="lname"]').value.trim();
     const email = document.querySelector('input[name="email"]').value.trim();
